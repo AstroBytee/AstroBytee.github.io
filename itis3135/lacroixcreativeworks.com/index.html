@@ -34,10 +34,6 @@
         header {
             background-color: var(--black-semitransparent);
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.684);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0px 3px;
             width: 100%;
             position: fixed;
         }
@@ -45,6 +41,7 @@
         h1 {
             color: var(--primary_color);
             font-size: 2rem;
+            font-family: "Montserrat";
         }
 
         #logo {
@@ -66,6 +63,7 @@
         h2 {
             text-align: center;
             font-size: 2.5rem;
+            font-family: "Montserrat";
             padding-bottom: 20px;
             color: var(--primary_color)
         }
@@ -87,17 +85,16 @@
 
         span {
             font-weight: bold;
-            color: var(--primary_color)
+            font-family: "Montserrat";
+            color: var(--primary_color);
         }
 
         span:hover {
             color: rgb(253, 200, 39);
+            transition: color 0.3s ease;
         }
 
         footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             background-color: var(--secondary_color);
             text-align: center;
             padding: 20px;
@@ -112,17 +109,13 @@
         address p:first-of-type {
             color: var(--primary_color)
         }
-
-        h1, h2, span {
-            font-family: "Montserrat";
-        }
         
     </style>
 </head>
 <body>
     <header>
         <div id="logo-and-h1">
-            <img id="logo" src="images/lcwlogotransparent.PNG" width=75px height=75px alt="LaCroix Creative Works Logo">
+            <img id="logo" src="images/lcwlogotransparent.PNG" width="75" height="75" alt="LaCroix Creative Works Logo">
             <h1>LaCroix Creative Works</h1>
         </div>
     </header>
