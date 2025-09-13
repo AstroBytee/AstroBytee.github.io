@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <title>LaCroix Creative Works | LaCroix Creative Works Services</title>
+    <title>LaCroix Creative Works | Premium Website Design & Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,30 +17,33 @@
             --tertiary_color: #373941;
             --quaternary_color: #7A7D7D;
             --quinary_color: #E8E7E7;
-            --black-semitransparent: rgba(19, 23, 27, 0.968);
+            --semitransparent: rgba(0, 0, 0, 0.25);
         }
 
         * {
             margin: 0;
-            font-family: "Roboto", sans-serif
+            font-family: "Roboto", sans-serif;
         }
 
         body {
-            background: var(--secondary_color);
+            /* background: var(--secondary_color); */
+            background: linear-gradient(to bottom right, rgb(5, 48, 79), rgb(1, 16, 22));
             color: var(--quinary_color);
-            height: 100vh
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
-            background-color: var(--black-semitransparent);
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.684);
-            width: 100%;
+            background-color: var(--semitransparent);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
             position: fixed;
+            width: 100%;
+            backdrop-filter: blur(10px);
         }
 
         h1 {
             color: var(--primary_color);
-            font-size: 2rem;
             font-family: "Montserrat";
         }
 
@@ -58,14 +61,14 @@
         main {
             padding: 75px;
             font-size: 1.5rem;
+            flex: 1;
         }
 
         h2 {
-            text-align: center;
-            font-size: 2.5rem;
+            font-size: 4.5rem;
             font-family: "Montserrat";
             padding-bottom: 20px;
-            color: var(--primary_color)
+            color: var(--quinary_color);
         }
 
         #about {
@@ -79,7 +82,6 @@
         }
 
         ul li::marker {
-            color: var(--quaternary_color);
             font-weight: bold;
         }
 
@@ -95,11 +97,11 @@
         }
 
         footer {
-            background-color: var(--secondary_color);
             text-align: center;
             padding: 20px;
-            background-color: var(--black-semitransparent);
-            box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.684);
+            background-color: var(--semitransparent);
+            box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
         }
 
         address {
@@ -107,7 +109,12 @@
         }
         
         address p:first-of-type {
-            color: var(--primary_color)
+            color: var(--primary_color);
+            font-weight: 500;
+        }
+
+        p, li {
+            font-weight: 300;
         }
         
     </style>
@@ -120,7 +127,7 @@
         </div>
     </header>
     <main>
-        <h2>LaCroix Creative Works Services</h2>
+        <h2>Premium Website Design & Development</h2>
         <p id="about">
             LaCroix Creative Works takes pride in transforming your ideas 
             into responsive digital experiences. We specialize in designing modern, 
