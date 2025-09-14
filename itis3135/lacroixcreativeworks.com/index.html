@@ -25,13 +25,9 @@
             font-family: "Roboto", sans-serif;
         }
 
-        body {
-            /* background: var(--secondary_color); */
-            background: linear-gradient(to bottom right, rgb(5, 48, 79), rgb(1, 16, 22));
-            color: var(--quinary_color);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+        html {
+            background-color: rgb(5, 48, 79);
+            overflow-x: hidden;
         }
 
         header {
@@ -42,9 +38,27 @@
             backdrop-filter: blur(10px);
         }
 
-        h1 {
-            color: var(--primary_color);
-            font-family: "Montserrat";
+        body {
+            /* background: var(--secondary_color); */
+            background: linear-gradient(to bottom right, rgb(5, 48, 79), rgb(1, 16, 22));
+            color: var(--quinary_color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            padding: 75px;
+            font-size: 1.5rem;
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--semitransparent);
+            box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
         }
 
         #logo {
@@ -58,17 +72,21 @@
             align-items: center;
         }
 
-        main {
-            padding: 75px;
-            font-size: 1.5rem;
-            flex: 1;
+        h1 {
+            color: var(--primary_color);
+            font-family: "Montserrat";
         }
 
         h2 {
             font-size: 4.5rem;
             font-family: "Montserrat";
             padding-bottom: 20px;
-            color: var(--quinary_color);
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-family: "Montserrat";
+            margin-bottom: 30px;
         }
 
         #about {
@@ -85,10 +103,15 @@
             font-weight: bold;
         }
 
+        p, li {
+            font-weight: 300;
+        }
+
         span {
             font-weight: bold;
             font-family: "Montserrat";
             color: var(--primary_color);
+            transition: color 0.3s ease;
         }
 
         span:hover {
@@ -96,25 +119,53 @@
             transition: color 0.3s ease;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--semitransparent);
-            box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
-        }
-
         address {
-            padding-bottom: 20px;
+            /* align to center */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
-        address p:first-of-type {
+        /* address p:first-of-type {
             color: var(--primary_color);
             font-weight: 500;
+        } */
+
+        address p{
+            background-color: var(--quinary_color);
+            padding: 10px;
+            border-radius: 10px;
+            color: var(--tertiary_color);
+            font-weight: bolder;
+            font-style: normal;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            max-width: 500px;
         }
 
-        p, li {
-            font-weight: 300;
+        address p:hover {
+            background-color: var(--primary_color);
+            color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        address p img {
+            transition: filter 0.3s ease;
+        }
+
+        address p:hover img {
+            filter: invert(1) brightness(2);
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            margin: 50px 0;
+            background: linear-gradient(to right, transparent, #FAA300, #c27f04, transparent);
         }
         
     </style>
@@ -135,6 +186,8 @@
             Our team is committed to delivering a high-quality final product with a 
             strong focus on user experience, backed by reliable ongoing support.
         </p>
+        <hr>
+        <h3>Why Choose Us?</h3>
         <ul>
             <li><span>Creative: </span>We deliver websites that are distinctive, aesthetically pleasing, and designed to stand out.</li>  
             <li><span>Fast & Reliable: </span>Count on us for efficient development and dependable results.</li>  
@@ -146,14 +199,25 @@
             Our services include personal portfolios, corporate websites, 
             e-commerce platforms, and even complex custom solutions.
         </p>
+        <hr>
+        <h3>Get in Touch: </h3>
+        <p>
+            Ready to elevate your online presence? Contact us today to discuss your project and 
+            discover how LaCroix Creative Works can bring your vision to life!
+        </p>
+        <address>
+            <p><img src="images/mail.svg"> lcworks101@gmail.com</p>
+            <p><img src="images/telephone.svg"> (909) 979-9091</p>
+            <p><img src="images/map-marker.svg"> 505 Web Design Rd, Charlotte NC</p>
+        </address>
     </main>
     <footer>
-        <address>
+        <!-- <address>
             <p>Contact Us: </p>
             <p>Email: lcworks101@gmail.com</p>
             <p>Phone: (909) 979-9091</p>
             <p>Address: 505 Web Design Rd, Charlotte NC</p>
-        </address>
+        </address> -->
         <p >LaCroix Creative Works &copy;2025</p>
     </footer>
 </body>
