@@ -1,0 +1,282 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regal Lynx || About</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, rgb(18,18,18), rgb(54, 0, 75));
+            min-height: 100vh;
+            color: white;
+            font-family: "Inter";
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 0 100px;
+            font-size: 0.6rem;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        #header-top {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: lightgray;
+            font-size: 1.5em;
+            margin-left: 20px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: rgba(143, 143, 143, 0.316);
+            text-decoration: none;
+        }
+
+        nav a:active {
+            color:rgb(205, 79, 255);
+            background-color: rgba(84, 37, 92, 0.36);
+        }
+
+        header img {
+            filter: invert();
+        }
+
+        h1 {
+            font-size: 1rem
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #about {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        main p {
+            color: lightgray;
+            padding-bottom: 10px;
+            font-family: "Roboto";
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+
+        footer p {
+            color: lightgray;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(18, 7, 19);
+            margin-top: 10px;
+            box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.305);
+        }
+
+        a {
+            color: rgb(191, 52, 247);
+            text-decoration: underline 0px transparent;
+            transition: color 0.3s ease, text-decoration-color 0.3s ease;
+        }
+
+        a:hover {
+            color: rgb(205, 79, 255);
+            text-decoration: underline 3px;
+        }
+
+        #slogan {
+            padding-bottom: 20px;
+            font-size: 1.5rem;
+            font-family: "Inter", sans-serif;
+            color: white;
+        }
+
+        #products {
+            /* background: linear-gradient(to top left, rgba(41, 28, 49, 0.338), rgba(43, 21, 67, 0.788));
+            box-shadow: 
+                0px -5px 5px rgba(17, 2, 25, 0.471),
+                0px 5px 5px rgba(17, 2, 25, 0.595)
+            ; */
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .product {
+            background-color: rgb(249, 243, 253);
+            border-radius: 15px;
+            color: black;
+            padding: 15px;
+            box-shadow: 5px 5px 8px rgb(18, 0, 26);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: transform 0.3s ease;
+            flex-basis: 33.33%;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .product p:first-of-type {
+            color: rgb(30, 30, 30);
+            font-size: 0.9rem;
+        }
+
+        .price {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgb(102, 0, 128);
+            border-radius: 15px;
+            padding: 10px;
+            cursor: not-allowed;
+            transition: background-color 0.3s ease;
+            width: calc(100% - 30px)
+        }
+
+        .price:hover {
+            background-color: rgb(138, 32, 180);
+            transition: background-color 0.3s ease;
+        }
+
+        img {
+            align-self: center;
+            opacity: 85%;
+        }
+
+        @media screen and (max-width: 510px) {
+            header {
+                flex-direction: column;
+                padding: 0 20%;
+                margin-bottom: 20px;
+            }
+
+            #header-top {
+                margin-bottom: 10px;
+            }
+
+            nav {
+                margin: 0;
+                padding: 0;
+            }
+
+            nav a {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            #products {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <div id="header-top">
+            <img src="images/regallynxlogo.svg" alt="Regal Lynx Logo" width="55px" height="55px">
+            <h1>Regal Lynx</h1>
+        </div>
+        <nav>
+            <a href="#products">Our Products</a>
+        </nav>
+     </header>
+     <main>
+        <div id="about">
+            <h2>About:</h2>
+            <p>
+                At Regal Lynx, we believe sound should be more than something you hear — it should be 
+                something you feel. Inspired by the precision of the lynx and the elegance of royalty, 
+                our mission is to deliver audio devices that combine cutting-edge technology with 
+                striking design. From immersive headphones to powerful speakers and professional-grade 
+                microphones, every product is crafted to bring clarity, comfort, and style to your listening 
+                experience.
+            </p>
+            <p>
+                We're more than just an audio company — we're creators, dreamers, and innovators dedicated 
+                to redefining how the world experiences sound. Whether you're a gamer, a music lover, or a 
+                professional, Regal Lynx equips you with the tools to hear every detail and own every moment. 
+                With us, you don't just listen — you rule the sound.
+            </p>
+        </div>
+        <div id="products">
+            <div class="product">
+                <h3>Lynx Pro X Wireless</h3>
+                <p>
+                    Experience crystal-clear audio with the Lynx Pro X Headphones. 
+                    Designed for comfort, their lightweight build keeps you 
+                    listening for hours, while the sleek, modern style ensures you look as cool as a Lynx.
+                </p>
+                <img src="images/headphone-1.svg" alt="Image of Lynx Pro X headphones" width="200px" height="200px">
+                <p class="price">Only $249.99</p>
+            </div>
+            <div class="product">
+                <h3>Lynx Growler 3</h3>
+                <p>
+                    Make your voice impossible to ignore with the Lynx Growler Microphone. 
+                    Engineered for deep clarity and powerful presence, it's perfect for gamers, 
+                    creators, and professionals who want to be heard — loud and clear.
+                </p>
+                <img src="images/microphone-lines-solid-full.svg" alt="Image of Lynx Growler 3 microphone" width="200px" height="200px">
+                <p class="price">Only $59.99</p>
+            </div>
+            <div class="product">
+                <h3>Lynx Purrer Bluetooth</h3>
+                <p>
+                    The Lynx Purrer Speaker delivers smooth, balanced sound with rich warmth and clarity. 
+                    Compact yet powerful, it's perfect for creating a relaxing atmosphere or enjoying music with friends.
+                </p>
+                <img src="images/speaker.svg" alt="Image of Lynx Purrer speaker" width="200px" height="200px">
+                <p class="price">Only $129.99</p>
+            </div>
+        </div>
+     </main>
+     <footer>
+        <p id="slogan"><strong>Hear the Lynx! It Listens. So Should You!</strong></p>
+        <p>Page Built by <a href="../lacroixcreativeworks.com/index.html">LaCroix Creative Works</a> &copy;2025</p>
+     </footer>
+</body>
+</html>

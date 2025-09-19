@@ -1,8 +1,23 @@
+:root {
+    --calpolygreen: #384932;
+    --darkgreen: #1e2b1a;
+    --applegreen: #98b837;
+    --yellowgreen: #a8d33c;
+    --sage: #CAD589;
+    --gold: #f2a60f;
+    --shadow: rgba(27, 32, 18, 0.752);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
   	font-family: "Plus Jakarta Sans", sans-serif;
-	background-color: rgb(9, 23, 44);
+	background-color: var(--calpolygreen);
     text-align: center;
-  	color: #ebf3f9; 
+  	color: var(--sage); 
 }
 
 main {
@@ -12,32 +27,34 @@ main {
 }
 
 header {
-    background-color: rgb(7, 16, 31);
+    background-color: var(--darkgreen);
     padding: 2%;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.465);
+    
+    box-shadow: 0 4px 8px var(--shadow);
+    margin-bottom: 20px;
 }
 
 footer {
-    background-color: rgb(7, 16, 31);
+    background-color: var(--darkgreen);
     padding: 2%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.465);
+    box-shadow: 0px 0px 8px 4px var(--shadow);
+    margin: 20px 0px;
 }
 
 h1, h2 {
   	font-family: "Space Mono", monospace;
-	color: #ff6200 ;
+	color:  var(--gold);
     text-align: center;
+    margin: 10px;
 }
 
 a {
-	color: greenyellow;
+	color: var(--applegreen);
     text-decoration:none;
 }
 
 a:hover {
-    color: #36b71c;
+    color: var(--yellowgreen);
     text-decoration: underline;
     text-decoration-thickness: 3px;
 }
@@ -48,10 +65,20 @@ figure {
 
 img {
     border-radius: 20px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.465);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul ol {
+    margin-left: 30px;
 }
 
 figcaption {
     font-style: italic;
-    color: #ebf3f9cd;
+    color: #969e67;
+    margin-bottom: 20px;
 }
