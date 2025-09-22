@@ -7,19 +7,11 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/default.css">
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Major+Mono+Display&family=Oxanium:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="scripts/HTMLinclude.js"></script>
 </head>
 <body>
     <header>
-        <h1>Regal Lynx || ITIS 3135</h1>
-        <nav>
-            <a href="./">Home</a>
-            |
-            <a href="introduction.html">Introduction</a>
-            |
-            <a href="contract.html">Contract</a>
-            |
-            <a href="regallynx.com/about.html">About</a>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
 
     <main>
@@ -31,22 +23,7 @@
     </main>
 
     <footer>
-        <nav>
-			<a href="https://webpages.charlotte.edu/rlacroix/">CLT Web</a> 
-            |
-            <a href="https://github.com/AstroBytee">GitHub.com</a> 
-			|
-			<a href="https://github.com/AstroBytee/AstroBytee.github.io">GitHub.io</a>
-            |
-            <a href="https://github.com/AstroBytee/AstroBytee.github.io/tree/main/itis3135">itis3135.io</a>
-            |
-            <a href="https://www.freecodecamp.org/ryanml_codecamp">freeCodeCamp</a>
-			|
-            <a href="https://www.codecademy.com/profiles/RyanML_codeacademy">Codeacademy</a>
-            |
-			<a href="https://www.linkedin.com/in/lacroixryan/">LinkedIn</a>
-        </nav>
-        <p>Page Built by <a href="lacroixcreativeworks.com/">LaCroix Creative Works</a> &copy;2025</p>
+        <div data-include="components/footer.html"></div>
     </footer>
 </body>
 </html>
