@@ -24,12 +24,15 @@
             border-top: 6px solid blue;
             border-bottom: 80px solid rgb(0, 255, 0);
             margin-left: -10.5px;
+            max-width: 200px;
         }
-        ol {
+        ul {
             font-family: Papyrus;
             text-align: center;
             margin-left: 0px;
             margin-bottom: 300px;
+            background-color: rgb(255, 255, 255);
+            transform: rotate(-2deg);
         }
         body {
             margin-bottom: 280px;
@@ -43,33 +46,54 @@
             background-color: rgb(242, 0, 255);
             font-style: italic;
         }
+        li:nth-of-type(4) {
+            color: white;
+            font-size: 1.4rem;
+            background-color: black;
+            padding-bottom: 20px;
+            margin-top: 20px;
+        }
         p:nth-of-type(2) {
             font-family: "rockwell";
             font-weight: bolder;
             font-size: 2rem;
-            background-color: rgb(0, 255, 234);
+            background: linear-gradient(45deg, red, lime, cyan, magenta, yellow);
+        background-size: 400% 400%;
+        animation: spinny 0.5s infinite linear;
+            padding-top: 12vh;
         }
         p:nth-of-type(1) {
             color: rgb(206, 243, 255)
+            
         }
         a {
             font-family: papyrus;
+            padding-bottom: 80px;
         }
         #IDK {
             font-size: 15rem;
             text-align: center;
             margin-bottom: 100px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 16px 61px 200px 4px;
+            box-shadow: 0 5px 30px 20px rgb(128, 0, 126);
+            border: 10px dotted rgb(0, 0, 0);
         }
+@keyframes spinny {
+    0% {background-position: 0% 0%;}
+    50% {background-position: 100% 100%;}
+    100% {background-position: 0% 0%;}
+}
     </style>
 </head>
 <body>
     <img src="C:\Users\ryanl\OneDrive\Documents\GitHub Repositories\AstroBytee.github.io\itis3135\stuff\721192naturemountainFORESTILikeBlue" alt="abcd" width="400" height="400">
     <h2>Photo of green and blue STUFF</h2>
-    <a href="www.youtube.com">Link that goes somewhere IDK</a>
+    <a href="https://youtu.be/boS3WJ7lxJM?si=d2Y54Vf1zLmplvI4">Link that goes somewhere IDK</a>
     <h1>This is a heading...</h1>
     <p>lorem ipsum lorem ipsum paragraph stuffffff lorem ipsum lorem ipsum paragraph stuffffff lorem ipsum</p>
     <h4 style="font-family: Arial Black; text-decoration: underline; margin-left: 10px;">Why I like cheese:</h4>
-    <ol>
+    <ul>
         <li>It's Tasty</li>
         <li>It's Cheesy</li>
         <li>It's Great on Pizza</li>
@@ -81,11 +105,10 @@
         <li>It's Great in Snacks</li>
         <li><i>It's Great in Desserts</i></li>
         <li>It's Great in EVERYTHING!</li>
-    </ol>
+    </ul>
     <div id="IDK">🍓</div>
     <p>The wind howled through the abandoned amusement park, rattling the rusted turnstiles like a ghost with unfinished business. Beneath the carousel, a squirrel had built a throne of cheddar wrappers, declaring itself the sovereign of all things cheese. Meanwhile, a forgotten jukebox played a warped rendition of “Sweet Dreams,” echoing through the cotton candy graveyard. Somewhere in the distance, a man in a trench coat whispered secrets to a wheel of gouda, convinced it held the key to time travel. And as the moon rose, casting a pale glow over the mozzarella-strewn pavement, the night began to smell faintly of mystery... and dairy.</p>
     <a href="C:\Users\ryanl\OneDrive\Documents\GitHub Repositories\AstroBytee.github.io\index.html" style="margin-left: 35px;">Maybe course page</a>
         <a href="C:\Users\ryanl\OneDrive\Documents\GitHub Repositories\AstroBytee.github.io\index.ht" style="color: rgb(202, 238, 209);">Maybe course page</a>
-
 </body>
 </html>
