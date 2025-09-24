@@ -1,7 +1,7 @@
 :root {
     --calpolygreen: #384932;
     --darkgreen: #1e2b1a;
-    --applegreen: #98b837;
+    --applegreen: #b0da31;
     --yellowgreen: #a8d33c;
     --sage: #CAD589;
     --gold: #f2a60f;
@@ -73,13 +73,17 @@ p {
     line-height: 1.6;
 }
 
-ul ol {
+ul ol, li {
     margin-left: 30px;
+}
+
+ul {
+    margin-bottom: 20px;
 }
 
 figcaption {
     font-style: italic;
-    color: #969e67;
+    color: #d6deaa;
     margin-bottom: 20px;
 }
 
