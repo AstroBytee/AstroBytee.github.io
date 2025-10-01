@@ -48,6 +48,12 @@ h1, h2 {
     margin: 10px;
 }
 
+h3 {
+    font-family: "Space Mono", monospace;
+    text-align: center;
+    margin: 10px;
+}
+
 a {
 	color: var(--applegreen);
     text-decoration:none;
@@ -74,12 +80,16 @@ p {
     line-height: 1.6;
 }
 
-ul ol, li {
-    margin-left: 30px;
+ol, ul {
+    margin-bottom: 20px;
 }
 
-ul {
-    margin-bottom: 20px;
+li {
+    margin-left: 40px;
+}
+
+ul ol {
+    margin-bottom: 0px;
 }
 
 figcaption {
@@ -90,6 +100,32 @@ figcaption {
 
 header nav:nth-of-type(2) {
     margin-top: 10px;
+}
+
+th, td {
+    border: 3px solid var(--calpolygreen);
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #313f2c;
+}
+
+table thead {
+    background-color: var(--darkgreen);
+}
+
+table tr:nth-child(even) {
+    background-color: #293424;
+}
+
+td ul {
+    margin-bottom: 0px;
 }
 
 @media screen and (min-width: 981px) and (max-width: 1400px) {
