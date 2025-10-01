@@ -1,0 +1,118 @@
+:root {
+    --calpolygreen: #384932;
+    --darkgreen: #1e2b1a;
+    --applegreen: #b0da31;
+    --yellowgreen: #a8d33c;
+    --sage: #CAD589;
+    --gold: #f2a60f;
+    --shadow: rgba(27, 32, 18, 0.752);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+  	font-family: "Plus Jakarta Sans", sans-serif;
+	background-color: var(--calpolygreen);
+    text-align: center;
+  	color: var(--sage); 
+}
+
+main {
+    text-align: left;
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--darkgreen);
+    padding: 2%;
+    box-shadow: 0 4px 8px var(--shadow);
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--darkgreen);
+    padding: 2%;
+    box-shadow: 0px 0px 8px 4px var(--shadow);
+    margin: 20px 0px;
+}
+
+h1, h2 {
+  	font-family: "Space Mono", monospace;
+	color:  var(--gold);
+    text-align: center;
+    margin: 10px;
+}
+
+a {
+	color: var(--applegreen);
+    text-decoration:none;
+}
+
+a:hover {
+    color: var(--yellowgreen);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
+    width: 430px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul ol, li {
+    margin-left: 30px;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+figcaption {
+    font-style: italic;
+    color: #d6deaa;
+    margin-bottom: 20px;
+}
+
+header nav:nth-of-type(2) {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    img {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 200px;
+    }
+    ul ol, li {
+        margin-left: 20px;
+    }
+    body {
+        font-size: 0.75rem;
+    }
+}
+
