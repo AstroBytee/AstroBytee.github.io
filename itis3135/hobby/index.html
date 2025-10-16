@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabletop Games</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            background-color: rgb(98, 33, 33);
+            color: rgb(227, 169, 169);
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 26.8px;
+            background-color: rgba(0, 0, 0, 0.333);
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.593);
+        }
+        main {
+            margin: 0 auto;
+            width: 80%;
+            flex-grow: 1;
+        }
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.333);
+            box-shadow: 1px -2px 5px rgba(0, 0, 0, 0.593);
+        }
+        nav {
+            display: flex;
+            gap: 5px;
+        }
+        hr {
+            width: 600px;
+            border-color: rgba(255, 166, 0, 0.637);
+        }
+        h1 {
+            font-family: "Cinzel Decorative", serif;
+            font-size: 3rem;
+            text-align: center;
+            color: rgb(255, 217, 217);
+        }
+        h2 {
+            font-family: "Cormorant Garamond";
+            font-size: 2rem;
+            color: rgb(255, 217, 217);
+        }
+        p {
+            font-family: 'Raleway';
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        a, button{
+            background-color: transparent;
+            border: none;
+            font-family: 'Raleway';
+            font-size: 1rem;
+            color: orange;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover, button:hover {
+            color: rgb(198, 119, 0);
+            cursor: pointer;
+        }
+        figure {
+            text-align: center;
+        }
+        img {
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.57);
+        }
+        figcaption {
+            font-style: italic;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: rgba(67, 17, 17, 0.471);
+        }
+        table thead {
+            background-color: rgba(55, 13, 13, 0.678);
+        }
+        th, td {
+            border: 5px solid rgb(98, 33, 33);
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: left;
+        }
+        table tr:nth-child(even) {
+            background-color: rgba(67, 17, 17, 0.378);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabletop Games</h1>
+        <hr>
+        <nav>
+            <button onClick="changePage('what')">What</button>
+            ✨
+            <button onClick="changePage('who')">Who</button>
+            ✨
+            <button onClick="changePage('when')">When</button>
+            ✨
+            <button onClick="changePage('where')">Where</button>
+            ✨
+            <button onClick="changePage('how')">How</button>
+            ✨
+            <button onClick="changePage('why')">Why</button>
+            ✨
+            <button onClick="changePage('aiprompts')">AI Prompts</button>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section id="what">
+            <h2>What are Tabletop Games?</h2>
+            <p>Tabletop games encompass a wide variety of experiences that can be enjoyed on any flat surface, typically a table. These include classic board games like chess and Monopoly, strategic card games such as Magic: The Gathering, and even miniature-based war games like Warhammer. The genre is incredibly diverse, offering something for every type of player—from casual family fun to intense competitive play.</p>
+            <p>Historically, tabletop games have been a cornerstone of social interaction across cultures. Ancient civilizations played games like Senet in Egypt or Go in China, and today's modern games build on that legacy with innovative mechanics and storytelling. With hundreds of titles available, each game brings its own unique rules, themes, and strategies, making the world of tabletop gaming endlessly rich and rewarding.</p>
+            <p>Some genres of tabletop games are:</p>
+            <ul>
+                <li>Board Games</li>
+                <li>Role-playing</li>
+                <li>Stategy</li>
+                <li>Dice</li>
+                <li>Deck Building</li>
+                <li>Engine Builders</li>
+            </ul>
+            <figure>
+                <img src="images/ravine-fox-hyde-unsplash.jpg" alt="Image of the tabletop game Ravine." height="350" width="500">
+                <figcaption>The strategy game Ravine</figcaption>
+            </figure>
+        </section>
+        <section id="who">
+            <h2>Who is Playing?</h2>
+            <h3>The Guild</h3>
+            <p>The Guild is a vibrant and welcoming student organization at the University of North Carolina at Charlotte, dedicated to the joy of gaming in all its forms. Every Friday, members gather to explore a wide range of tabletop experiences—from classic board games and card games to role-playing adventures and indie titles. Whether you're a seasoned strategist or a curious newcomer, there's always something new to discover.</p>
+            <p>One of the best aspects of The Guild is its open format. You're encouraged to join in on any game already being played, or bring your own favorite game to share with others. Hosting your own session is easy and supported by the community, making it a great place to test new games or introduce friends to your personal favorites. It's not just about playing—it's about building connections through shared stories and laughter.</p>
+            <figure>
+                <img src="images/terraformingmarsgame.jpg" alt="Image of the board games Terraforming Mars." width="500">
+                <figcaption>A game of the strategy board game Terraforming Mars at the Guild.</figcaption>
+            </figure>
+        </section>
+        <section id="when">
+            <h2>When Can I Play?</h2>
+            <p>One of the greatest joys of tabletop gaming is its flexibility—you can play anytime, anywhere, and with anyone. Whether it's a cozy winter evening indoors or a sunny afternoon at the park, tabletop games adapt to your schedule and setting. There's no seasonal limit or required setup beyond a flat surface and a few willing participants.</p>
+            <p>Late-night game sessions are especially memorable. You can gather with friends and play until the early hours, laughing over dice rolls and dramatic plot twists. Tabletop games offer a timeless escape from screens and stress, making them perfect for spontaneous fun or planned game nights. The freedom to play year-round means the adventure never has to end.</p>
+            <figure>
+                <img src="images/diplomacygame.jpg" alt="Image of the game Diplomacy." width="500">
+                <figcaption>A game of Diplomacy at a friend's house during the summer.</figcaption>
+            </figure>
+        </section>
+        <section id="where">
+            <h2>Where Can I Play?</h2>
+            <p>Tabletop games are incredibly versatile when it comes to location. You can play them in your living room, at a coffee shop, in a dorm lounge, or even outdoors on a picnic table. All you need is a reasonably flat surface and enough space to accommodate the components of the game. Some games are compact and travel-friendly, making them ideal for road trips or quick play sessions on the go.</p>
+            <p>On the other hand, some games—especially those with miniatures, elaborate boards, or multiple decks—require a larger setup. These games are best enjoyed on spacious tables where players can spread out and immerse themselves fully. Whether you're in a cramped apartment or a dedicated game room, there's a tabletop game that fits your space and style.</p>
+            <figure>
+                <img src="images/wyrmspangame.jpg" alt="Image of the game Wyrmspan" width="500">
+                <figcaption>A game of Wyrmspan, a fun engine builder with dragons. If you don't have a table to play on the floor works fine to.</figcaption>
+            </figure>
+        </section>
+        <section id="how">
+            <h2>How Can I Join?</h2>
+            <p>There are many ways you can join in the fun! Joining the world of tabletop gaming is easier than ever. Start by inviting a few friends over for a casual game night—bring snacks, pick a game that suits everyone's mood, and let the fun unfold. You don't need to be an expert; many games are easy to learn and perfect for beginners. The shared experience of playing together builds lasting memories and friendships.</p>
+            <p>If you're looking to expand your gaming circle, there are plenty of online communities and local meetups dedicated to tabletop games. Websites like Meetup or Discord servers often host events where you can find players near you. Game stores and libraries also host regular sessions, offering a great way to discover new games and meet fellow enthusiasts. The tabletop community is welcoming and diverse, so don't hesitate to jump in!</p>
+            <figure>
+                <img src="images/imageoofgamestore.jpg" alt="Image of tabletop games on a shelf at a game store." width="500">
+                <figcaption>You can find all kinds of game at stores. This image was taken at The Gamer's Armory in Cary, NC.</figcaption>
+            </figure>
+        </section>
+        <section id="why">
+            <h2>Why Do We Play Tabletop Games?</h2>
+            <p>Well the obvious answer would be that it's great fun! They're a way to connect, challenge, and create. The joy of rolling dice, drawing cards, or moving pieces across a board taps into something deeply human: our love of stories, strategy, and shared experiences. Whether you're laughing over a silly party game or locked in a tense battle of wits, the emotional highs and lows make every session unforgettable.</p>
+            <p>The sheer variety of tabletop games means there's always something new to explore. From cooperative adventures to competitive showdowns, from fast-paced fillers to epic campaigns, the possibilities are endless. You can play with family, friends, or strangers and still find common ground. It’s this blend of accessibility, creativity, and social interaction that keeps people coming back to the table.</p>
+            <figure>
+                <img src="images/catangame.jpg" alt="Image of the board game Catan." width="500">
+                <figcaption>The Euro-style board game Catan that combines strategy, resource management, and negotiation.</figcaption>
+            </figure>
+            <figure>
+                <img src = "images/gamehoard.jpg" alt="Image of game collection." height="500">
+                <figcaption>Some people enjoy tabletop games so much that they collect them. So much so that is becomes an addiction.</figcaption>
+            </figure>
+        </section>
+        <section id="aiprompts">
+            <h2>Ai Prompts</h2>
+            <table>
+  <thead>
+    <tr>
+      <th>Prompt</th>
+      <th>Response</th>
+      <th>Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Expand this text to be longer and more detailed: Tabletop games are simply any game that you can put on a table. This includes card games, board games, and more! People around the world have been playing tabletop games for thousands of years. There are hundreds of tabletop games out there, each with a different play style.</td>
+      <td>Tabletop games encompass a wide variety of experiences that can be enjoyed on any flat surface, typically a table. These include classic board games like chess and Monopoly, strategic card games such as Magic: The Gathering, and even miniature-based war games like Warhammer. The genre is incredibly diverse, offering something for every type of player—from casual family fun to intense competitive play.<br><br>
+      Historically, tabletop games have been a cornerstone of social interaction across cultures. Ancient civilizations played games like Senet in Egypt or Go in China, and today’s modern games build on that legacy with innovative mechanics and storytelling. With hundreds of titles available, each game brings its own unique rules, themes, and strategies, making the world of tabletop gaming endlessly rich and rewarding.</td>
+      <td>Copilot</td>
+    </tr>
+    <tr>
+      <td>Expand this text to be longer and more detailed: The Guild is a club at the University of North Carolina at Charlotte that meets up every friday to play all kinds of games. You can play any of the games at the Guild or you can host your own game that you bring.</td>
+      <td>The Guild is a vibrant and welcoming student organization at the University of North Carolina at Charlotte, dedicated to the joy of gaming in all its forms. Every Friday, members gather to explore a wide range of tabletop experiences—from classic board games and card games to role-playing adventures and indie titles. Whether you're a seasoned strategist or a curious newcomer, there's always something new to discover.<br><br>
+      One of the best aspects of The Guild is its open format. You’re encouraged to join in on any game already being played, or bring your own favorite game to share with others. Hosting your own session is easy and supported by the community, making it a great place to test new games or introduce friends to your personal favorites. It’s not just about playing—it’s about building connections through shared stories and laughter.</td>
+      <td>Copilot</td>
+    </tr>
+    <tr>
+      <td>This text is about when you can play tabletop games. Expand this text to be longer and more detailed: The best part about tabletop games is you can play them year round whenever you like. You can stay up all midnight if you like.</td>
+      <td>One of the greatest joys of tabletop gaming is its flexibility—you can play anytime, anywhere, and with anyone. Whether it's a cozy winter evening indoors or a sunny afternoon at the park, tabletop games adapt to your schedule and setting. There’s no seasonal limit or required setup beyond a flat surface and a few willing participants.<br><br>
+      Late-night game sessions are especially memorable. You can gather with friends and play until the early hours, laughing over dice rolls and dramatic plot twists. Tabletop games offer a timeless escape from screens and stress, making them perfect for spontaneous fun or planned game nights. The freedom to play year-round means the adventure never has to end.</td>
+      <td>Copilot</td>
+    </tr>
+    <tr>
+      <td>This text is about where you can play tabletop games. Expand this text to be longer and more detailed: Tabletop games can be played almost anywhere as long as you have a large enough space. Tabletop games can vary in size a lot so make sure you have enough room. Some games are small enough to play in a car while others require a large table.</td>
+      <td>Tabletop games are incredibly versatile when it comes to location. You can play them in your living room, at a coffee shop, in a dorm lounge, or even outdoors on a picnic table. All you need is a reasonably flat surface and enough space to accommodate the components of the game. Some games are compact and travel-friendly, making them ideal for road trips or quick play sessions on the go.<br><br>
+      On the other hand, some games—especially those with miniatures, elaborate boards, or multiple decks—require a larger setup. These games are best enjoyed on spacious tables where players can spread out and immerse themselves fully. Whether you're in a cramped apartment or a dedicated game room, there's a tabletop game that fits your space and style.</td>
+      <td>Copilot</td>
+    </tr>
+    <tr>
+      <td>This text is about how someone can join the fun. Expand this text to be longer and more detailed: There are many ways you can join in the fun! Try asking friends to meet somewhere for a gamenight. You can also seach online for places where you can meet with others to play tabletop games.</td>
+      <td>Joining the world of tabletop gaming is easier than ever. Start by inviting a few friends over for a casual game night—bring snacks, pick a game that suits everyone's mood, and let the fun unfold. You don’t need to be an expert; many games are easy to learn and perfect for beginners. The shared experience of playing together builds lasting memories and friendships.<br><br>
+      If you're looking to expand your gaming circle, there are plenty of online communities and local meetups dedicated to tabletop games. Websites like Meetup or Discord servers often host events where you can find players near you. Game stores and libraries also host regular sessions, offering a great way to discover new games and meet fellow enthusiasts. The tabletop community is welcoming and diverse, so don’t hesitate to jump in!</td>
+      <td>Copilot</td>
+    </tr>
+    <tr>
+      <td>This text is about why we play tabletop games. Expand this text to be longer and more detailed: Well the obvious answer would be that it's great fun! Being able to play anywhere, whenever, with whoever, and the largest varity of tableto games out there allows for endless entertainment.</td>
+      <td>Tabletop games are more than just entertainment—they’re a way to connect, challenge, and create. The joy of rolling dice, drawing cards, or moving pieces across a board taps into something deeply human: our love of stories, strategy, and shared experiences. Whether you're laughing over a silly party game or locked in a tense battle of wits, the emotional highs and lows make every session unforgettable.<br><br>
+      The sheer variety of tabletop games means there's always something new to explore. From cooperative adventures to competitive showdowns, from fast-paced fillers to epic campaigns, the possibilities are endless. You can play with family, friends, or strangers and still find common ground. It’s this blend of accessibility, creativity, and social interaction that keeps people coming back to the table.</td>
+      <td>Copilot</td>
+    </tr>
+  </tbody>
+</table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Page Built by <a href="../lacroixcreativeworks.com/index.html">LaCroix Creative Works</a> &copy;2025</p>
+    </footer>
+
+    <script src="scripts/default.js"></script>
+</body>
+</html>

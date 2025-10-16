@@ -38,7 +38,7 @@ footer {
     background-color: var(--darkgreen);
     padding: 2%;
     box-shadow: 0px 0px 8px 4px var(--shadow);
-    margin: 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 h1, h2 {
@@ -78,6 +78,10 @@ img {
 p {
     margin-bottom: 20px;
     line-height: 1.6;
+}
+
+footer p {
+    margin-bottom: 0px;
 }
 
 ol, ul {
