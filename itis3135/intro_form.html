@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan LaCroix's Regal Lynx || ITIS3135 || Introduction Form</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Major+Mono+Display&family=Oxanium:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <div id="outputContainer"></div>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below:</h3>
+        <form>
+            <fieldset>
+                <legend>Name Information</legend>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name here" value="Ryan" required/>
+
+                <label for="middleName">Middle Name:</label>
+                <input type="text" id="middleName" name="middleName" placeholder="Enter your middle name here"/>
+
+                <label for="preferredName">Preferred Name:</label>
+                <input type="text" id="preferredName" name="preferredName" placeholder="Enter your preferred name here"/>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name here" value="LaCroix" required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Acknowledgement</legend>
+
+                <label for="statementOfAcknowledgement">Acknowledgement Statement</label>
+                <input type="text" id="statementOfAcknowledgement" name="statementOfAcknowledgement" placeholder="Enter acknowledgement here" value="I acknowledge that any information I post here is visible to the public. R.L. " required/>
+
+                <label for="date">Acknowledgement Date: </label>
+                <input type="text" id="date" name="date" placeholder="Enter the date" value="8/18/2025" required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mascot Information</legend>
+                
+                <label for="mascotAdjective">Mascot Adjective:</label>
+                <input type="text" id="mascotAdjective" name="mascotAdjective" placeholder="Enter an adjective for the mascot" value="Regal" required/>
+
+                <label for="mascotAnimal">Mascot Animal:</label>
+                <input type="text" id="mascotAnimal" name="mascotAnimal" placeholder="Enter an animal for the mascot" value="Lynx" required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Divider</legend>
+
+                <label for="divider">Divider Character:</label>
+                <input type="text" id="divider" name="divider" placeholder="Enter a divider character" value="||" required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Picture</legend>
+
+                <label for="pictureUpload">Image Upload:</label>
+                <input type="file" id="pictureUpload" name="pictureUpload" required/>
+                <div id="loadImage">
+                    <img src="images/self_at_restaraunt.png" alt="Ryan_LaCroix">
+                </div>
+
+                <label for="pictureCaption">Picture Caption:</label>
+                <input type="text" id="pictureCaption" name="pictureCaption" placeholder="Enter picture caption here" value="Me at a Mediterranean restaraunt" required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Background</legend>
+
+                <label for="personalBackground">Personal Background:</label>
+                <input type="text" id="personalBackground" name="personalBackground" placeholder="Enter your personal background here" value="I was born in Saint Louis, Missouri, however I spent most of my childhood in Charleston, South Carolina. I moved to North Carolina around 5 years ago and have been living here ever since." required/>
+                
+                <label for="professionalBackground">Professional Background:</label>
+                <input type="text" id="professionalBackground" name="professionalBackground" placeholder="Enter your professional background here" value="Worked as a cashier and sandwich chef at Bruegger's Bagels in Cary, NC." required/>
+                
+                <label for="academicBackground">Academic Background:</label>
+                <input type="text" id="academicBackground" name="academicBackground" placeholder="Enter your academic background here" value="I went to Green Level High School before coming here to UNC Charlotte. I'm a computer science major with a concentration in cybersecurity. I plan to graduate in 2028." required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses I'm Taking & Why:</legend>
+
+                <div id="coursesContainer">
+                    <!-- Prefilled Courses: -->
+                    <!-- Course 1: -->
+                    <fieldset id="course1">
+                        <label for="department1">Department:</label>
+                        <input type="text" id="department1" name="department1" placeholder="Enter course department here" value="STAT" required/>
+                        
+                        <label for="courseNumber1">Course Number:</label>
+                        <input type="text" id="courseNumber1" name="courseNumber1" placeholder="Enter course number here" value="2122" required/>
+                        
+                        <label for="courseName1">Course Name:</label>
+                        <input type="text" id="courseName1" name="courseName1" placeholder="Enter course name here" value="Intro to Prob & Stat" required/>
+                        
+                        <label for="reasonForTaking1">Reason for Taking:</label>
+                        <input type="text" id="reasonForTaking1" name="reasonForTaking1" placeholder="Enter reason for taking course here" value="Required course." required/>
+                        
+                        <button type="button" class="removeCourseButton">Remove Course</button>
+                    </fieldset>
+                    <!-- Course 2: -->
+                    <fieldset id="course2">
+                        <label for="department2">Department:</label>
+                        <input type="text" id="department2" name="department2" placeholder="Enter course department here" value="ITIS" required/>
+                        
+                        <label for="courseNumber2">Course Number:</label>
+                        <input type="text" id="courseNumber2" name="courseNumber2" placeholder="Enter course number here" value="3135" required/>
+                        
+                        <label for="courseName2">Course Name:</label>
+                        <input type="text" id="courseName2" name="courseName2" placeholder="Enter course name here" value="Front-End Web Application Development" required/>
+                        
+                        <label for="reasonForTaking2">Reason for Taking:</label>
+                        <input type="text" id="reasonForTaking2" name="reasonForTaking2" placeholder="Enter reason for taking course here" value="I wanted to learn more about front-end web development. I've only touched the basics and I'm excited to learn more." required/>
+                        
+                        <button type="button" class="removeCourseButton">Remove Course</button>
+                    </fieldset>
+                    <!-- Course 3: -->
+                    <fieldset id="course3">
+                        <label for="department3">Department:</label>
+                        <input type="text" id="department3" name="department3" placeholder="Enter course department here" value="ITSC" required/>
+                        
+                        <label for="courseNumber3">Course Number:</label>
+                        <input type="text" id="courseNumber3" name="courseNumber3" placeholder="Enter course number here" value="2181" required/>
+                        
+                        <label for="courseName3">Course Name:</label>
+                        <input type="text" id="courseName3" name="courseName3" placeholder="Enter course name here" value="Introduction to Computer Systems" required/>
+                        
+                        <label for="reasonForTaking3">Reason for Taking:</label>
+                        <input type="text" id="reasonForTaking3" name="reasonForTaking3" placeholder="Enter reason for taking course here" value="Required Course. However, I'm still looking forward to it." required/>
+                        
+                        <button type="button" class="removeCourseButton">Remove Course</button>
+                    </fieldset>
+                    <!-- Course 4: -->
+                    <fieldset id="course4">
+                        <label for="department4">Department:</label>
+                        <input type="text" id="department4" name="department4" placeholder="Enter course department here" value="ARTA" required/>
+                        
+                        <label for="courseNumber4">Course Number:</label>
+                        <input type="text" id="courseNumber4" name="courseNumber4" placeholder="Enter course number here" value="1502" required/>
+                        
+                        <label for="courseName4">Course Name:</label>
+                        <input type="text" id="courseName4" name="courseName4" placeholder="Enter course name here" value="Global Arts/Humanities: Art in a Global Context" required/>
+                        
+                        <label for="reasonForTaking4">Reason for Taking:</label>
+                        <input type="text" id="reasonForTaking4" name="reasonForTaking4" placeholder="Enter reason for taking course here" value="I needed a class to fulfill one of the Theme requirements for my major. I thought it would be easy and I hope I will find it somewhat interesting." required/>
+                        
+                        <button type="button" class="removeCourseButton">Remove Course</button>
+                    </fieldset>
+                    <!-- Course 5: -->
+                    <fieldset id="course5">
+                        <label for="department5">Department:</label>
+                        <input type="text" id="department5" name="department5" placeholder="Enter course department here" value="MUSC" required/>
+                        
+                        <label for="courseNumber5">Course Number:</label>
+                        <input type="text" id="courseNumber5" name="courseNumber5" placeholder="Enter course number here" value="1512" required/>
+                        
+                        <label for="courseName5">Course Name:</label>
+                        <input type="text" id="courseName5" name="courseName5" placeholder="Enter course name here" value="Local Arts/Humanities: Music in U.S. Communities" required/>
+                        
+                        <label for="reasonForTaking5">Reason for Taking:</label>
+                        <input type="text" id="reasonForTaking5" name="reasonForTaking5" placeholder="Enter reason for taking course here" value="Same as ARTA 1502. I needed one more class to fulfill my Theme requirements for my major." required/>
+                        
+                        <button type="button" class="removeCourseButton">Remove Course</button>
+                    </fieldset>
+                </div>
+
+                <button type="button" id="addCourseButton">Add New Course</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote</legend>
+
+                <label for="quote">Favorite Quote:</label>
+                <input id="quote" name="quote" placeholder="Enter your favorite quote here" value="Not all those who wander are lost." required/>
+                
+                <label for="quoteAuthor">Quote Author:</label>
+                <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Enter the quote author here" value="J.R.R. Tolkien" required/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Other Information</legend>
+
+                <label for="funnyItem">Funny/Interesting Item to Remember Me by:</label>
+                <input type="text" id="funnyItem" name="funnyItem" placeholder="Enter a funny/interesting item here" value="I have a twin brother named Benjamin!"/>
+
+                <label for="share">Something I would like to share:</label>
+                <input type="text" id="share" name="share" placeholder="Enter something you would like to share here"/>
+            </fieldset>
+
+            <div id="buttonsContainer">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearButton">Clear</button>
+            </div>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+</html>
