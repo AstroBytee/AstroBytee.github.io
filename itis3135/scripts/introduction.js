@@ -94,7 +94,7 @@ document
           <input type="text" id="courseName3" name="courseName3" placeholder="Enter course name here" value="Introduction to Computer Systems" required/>
           
           <label for="reasonForTaking3">Reason for Taking:</label>
-          <input type="text" id="reasonForTaking3" name="reasonForTaking3" placeholder="Enter reason for taking course here" value="Required Course. However, I'm still looking forward to it." required/>
+          <input type="text" id="reasonForTaking3" name="reasonForTaking3" placeholder="Enter reason for taking course here" value="Required course. However, I'm still looking forward to it." required/>
           
           <button type="button" class="removeCourseButton">Remove Course</button>
       </fieldset>
@@ -206,7 +206,7 @@ document
     });
     // Build the content string with introduction details
     let content = `
-        <h2>Introduction</h2>
+        <h2>Introduction Form</h2>
         <p id="acknowledgement"><em>${introduction.statementOfAcknowledgement} ${introduction.date}</em></p>
         <h2>${introduction.firstName} ${introduction.middleName} ${introduction.preferredName} ${introduction.lastName} ${introduction.divider} ${introduction.mascotAdjective} ${introduction.mascotAnimal}</h2>
         <figure>
