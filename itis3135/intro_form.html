@@ -7,14 +7,15 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/default.css">
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Major+Mono+Display&family=Oxanium:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/a11y-dark.min.css">
 </head>
 <body>
 
     <div data-include="components/header.html"></div>
 
     <main>
-        <div id="outputContainer"></div>
         <h2>Introduction Form</h2>
+        <div id="outputContainer"></div>
         <h3>Please submit the form below:</h3>
         <form>
             <fieldset>
@@ -23,24 +24,14 @@
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" placeholder="Enter your first name here" value="Ryan" required/>
 
-                <label for="middleName">Middle Name:</label>
-                <input type="text" id="middleName" name="middleName" placeholder="Enter your middle name here"/>
-
                 <label for="preferredName">Preferred Name:</label>
                 <input type="text" id="preferredName" name="preferredName" placeholder="Enter your preferred name here"/>
 
+                <label for="middleInitial">Middle Name:</label>
+                <input type="text" id="middleInitial" name="middleInitial" placeholder="Enter your middle name here"/>
+
                 <label for="lastName">Last Name:</label>
                 <input type="text" id="lastName" name="lastName" placeholder="Enter your last name here" value="LaCroix" required/>
-            </fieldset>
-
-            <fieldset>
-                <legend>Acknowledgement</legend>
-
-                <label for="statementOfAcknowledgement">Acknowledgement Statement</label>
-                <input type="text" id="statementOfAcknowledgement" name="statementOfAcknowledgement" placeholder="Enter acknowledgement here" value="I acknowledge that any information I post here is visible to the public. R.L. " required/>
-
-                <label for="date">Acknowledgement Date: </label>
-                <input type="text" id="date" name="date" placeholder="Enter the date" value="8/18/2025" required/>
             </fieldset>
 
             <fieldset>
@@ -63,14 +54,14 @@
             <fieldset>
                 <legend>Picture</legend>
 
-                <label for="pictureUpload">Image Upload:</label>
-                <input type="file" id="pictureUpload" name="pictureUpload"/>
+                <label for="image">Image Upload:</label>
+                <input type="file" id="image" name="image"/>
                 <div id="loadImage">
                     <img src="images/self_at_restaraunt.png" alt="Ryan_LaCroix">
                 </div>
 
-                <label for="pictureCaption">Picture Caption:</label>
-                <input type="text" id="pictureCaption" name="pictureCaption" placeholder="Enter picture caption here" value="Me at a Mediterranean restaraunt" required/>
+                <label for="imageCaption">Picture Caption:</label>
+                <input type="text" id="imageCaption" name="imageCaption" placeholder="Enter picture caption here" value="Me at a Mediterranean restaraunt" required/>
             </fieldset>
 
             <fieldset>
@@ -190,16 +181,18 @@
                 <legend>Other Information</legend>
 
                 <label for="funnyItem">Funny/Interesting Item to Remember Me by:</label>
-                <input type="text" id="funnyItem" name="funnyItem" placeholder="Enter a funny/interesting item here" value="I have a twin brother named Benjamin!"/>
+                <input type="text" id="funnyItem" name="funnyItem" placeholder="Enter a funny/interesting item here"/>
 
                 <label for="share">Something I would like to share:</label>
-                <input type="text" id="share" name="share" placeholder="Enter something you would like to share here"/>
+                <input type="text" id="share" name="share" placeholder="Enter something you would like to share here" value="I have a twin brother named Benjamin!"/>
             </fieldset>
 
             <div id="buttonsContainer">
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
                 <button type="button" id="clearButton">Clear</button>
+                <button type="button" id="generateJSON">Generate JSON</button>
+                <button type="button" id="generateHTML">Generate HTML</button>
             </div>
         </form>
     </main>
@@ -208,5 +201,8 @@
 
     <script src="scripts/HTMLInclude.js"></script>
     <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 </body>
 </html>

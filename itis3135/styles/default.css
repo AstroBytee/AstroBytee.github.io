@@ -2,7 +2,7 @@
     --calpolygreen: #384932;
     --darkgreen: #1e2b1a;
     --applegreen: #b0da31;
-    --yellowgreen: #a8d33c;
+    --yellowgreen: #97bd35;
     --sage: #CAD589;
     --gold: #f2a60f;
     --shadow: rgba(27, 32, 18, 0.752);
@@ -57,6 +57,7 @@ h3 {
 a {
 	color: var(--applegreen);
     text-decoration:none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -75,10 +76,21 @@ button {
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 2px 4px var(--shadow);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 button:hover {
     background-color: var(--yellowgreen);
+}
+
+.removeCourseButton {
+    background-color: rgb(128, 13, 13);
+    color: rgb(255, 109, 109);
+}
+
+.removeCourseButton:hover {
+    background-color: rgb(109, 11, 11);
+    color: rgb(255, 76, 76);
 }
 
 fieldset {

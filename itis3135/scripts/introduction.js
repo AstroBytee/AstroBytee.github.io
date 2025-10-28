@@ -1,15 +1,26 @@
 let courseCount = 5; // Start from 5 since there are 5 prefilled courses
 
+// Function that shows/hides everything but the reset button and output container
+function toggleForm(action) {
+  Array.from(document.getElementsByTagName("fieldset")).forEach((fieldset) => {
+    fieldset.style.display = action === "show" ? "flex" : "none";
+  });
+  document.getElementsByTagName("h3")[0].style.display = action === "show" ? "block" : "none";
+  document.querySelectorAll("#buttonsContainer button:not([type='reset'])").forEach((button) => {
+    button.style.display = action === "show" ? "inline" : "none";
+  });
+}
+
 // prevents page refresh / default behavior on form submission
 document.getElementsByTagName("form")[0].addEventListener("submit", (e) => {e.preventDefault();});
 
 // LOAD and display user-uploaded IMAGE
-document.getElementById("pictureUpload").addEventListener("change", () => {
-    let img = document.getElementById("pictureUpload").files[0];
+document.getElementById("image").addEventListener("change", () => {
+    let img = document.getElementById("image").files[0];
 
     const imageURL = URL.createObjectURL(img);
 
-    let text = "<img src='" + imageURL + "' alt='User Image'>";
+    let text = "<img src='" + imageURL + "' alt='Introduction Image'>";
 
     document.getElementById("loadImage").innerHTML = text;
 });
@@ -35,14 +46,10 @@ document
   .addEventListener("click", () => {
     // Clear output container
     document.getElementById("outputContainer").innerHTML = "";
-    // Show the form's fieldsets and headings
-    Array.from(document.getElementsByTagName("fieldset")).forEach((fieldset) => {
-      fieldset.style.display = "flex";
-    });
-    document.getElementsByTagName("h2")[0].style.display = "block";
-    document.getElementsByTagName("h3")[0].style.display = "block";
-    document.getElementById("clearButton").style.display = "inline";
-    document.querySelector("button[type='submit']").style.display = "inline";
+    // Show the form's fieldsets, headings, and buttons
+    toggleForm("show");
+    // Reset heading
+    document.getElementsByTagName("h2")[0].innerText = "Introduction Form";
     // Set default image
     let defaultImageURL = "images/self_at_restaraunt.png";
     let text = "<img src='" + defaultImageURL + "' alt='Me at a Mediterranean Restaurant'>";
@@ -184,81 +191,112 @@ document
     coursesContainer.appendChild(newCourseInput);
   });
 
-// LOAD INTRODUCTION using form data when 'Submit' button is clicked
-document
-  .querySelector("button[type='submit']")
-  .addEventListener("click", () => {
-
-    // check if all required fields are filled
-    requiredInputs = document.querySelectorAll("input[required]");
-    for (let input of requiredInputs) {
-      if (input.value.trim() === "") {
-        alert("Please fill all required fields.");
-        return;
-      }
+// Function to collect form data into an object. Checks to make sure all required fields are filled.
+function collectFormData() {
+  requiredInputs = document.querySelectorAll("input[required]");
+  for (let input of requiredInputs) {
+    if (input.value.trim() === "") {
+      alert("Please fill all required fields.");
+      return;
     }
+  }
 
-    // get introduction information from form data
-    const formData = new FormData(document.getElementsByTagName("form")[0]);
-    const introduction = {};
-    formData.forEach((value, key) => {
-        introduction[key] = value;
-    });
-    // Build the content string with introduction details
-    let content = `
-        <h2>Introduction Form</h2>
-        <p id="acknowledgement"><em>${introduction.statementOfAcknowledgement} ${introduction.date}</em></p>
-        <h2>${introduction.firstName} ${introduction.middleName} ${introduction.preferredName} ${introduction.lastName} ${introduction.divider} ${introduction.mascotAdjective} ${introduction.mascotAnimal}</h2>
-        <figure>
-            ${document.getElementById("loadImage").innerHTML}
-            <figcaption>${introduction.pictureCaption}</figcaption>
-        </figure>
-        <ul>
-            <li><b>Personal Background:</b> ${introduction.personalBackground}</li>
-            <li><b>Professional Background:</b> ${introduction.professionalBackground}</li>
-            <li><b>Academic Background:</b> ${introduction.academicBackground}</li>
-            <li>
-                <b>Courses I'm Taking, & Why:</b>
-                <ol>
-    `;
-    // Append courses
-    document.querySelectorAll("#coursesContainer fieldset").forEach((courseFieldset) => {
-        let id = courseFieldset.id.slice(-1);
-        const department = courseFieldset.querySelector("input[name='department" + id + "']").value;
-        const courseNumber = courseFieldset.querySelector("input[name='courseNumber" + id + "']").value;
-        const courseName = courseFieldset.querySelector("input[name='courseName" + id + "']").value;
-        const reasonForTaking = courseFieldset.querySelector("input[name='reasonForTaking" + id + "']").value;
-        content += `<li><b>${department} ${courseNumber} - ${courseName}:</b> ${reasonForTaking}</li>`;
-    });
-    content += `
-                </ol>
-            </li>
-    `;
-
-    // Only include the "funnyItem" if it is not empty
-    if (introduction.funnyItem !== undefined && introduction.funnyItem !== null && introduction.funnyItem !== "") {
-        content += `<li><b>Funny/Interesting Item to Remember Me by:</b> ${introduction.funnyItem}</li>`;
-    }
-    // Only include the "share" item if it is not empty
-    if (introduction.share !== undefined && introduction.share !== null && introduction.share !== "") {
-        content += `<li><b>Something I would like to share:</b> ${introduction.share}</li>`;
-    }
-    // Close the unordered list and add the quote
-    content += `
-        </ul>
-        <blockquote>"${introduction.quote}"</blockquote>
-        <cite>— ${introduction.quoteAuthor}</cite>
-    `;
-
-    // Hide everything but the reset button and output container
-    Array.from(document.getElementsByTagName("fieldset")).forEach((fieldset) => {
-      fieldset.style.display = "none";
-    });
-    document.getElementsByTagName("h2")[0].style.display = "none";
-    document.getElementsByTagName("h3")[0].style.display = "none";
-    document.getElementById("clearButton").style.display = "none";
-    document.querySelector("button[type='submit']").style.display = "none";
-
-    // Update the output container with the introduction content
-    document.getElementById("outputContainer").innerHTML = content;
+  const formData = new FormData(document.getElementsByTagName("form")[0]);
+  const data = {};
+  formData.forEach((value, key) => {
+      data[key] = value;
   });
+  // Collect courses into an array of objects
+  data["courses"] = [];
+  for (let i = 1; i <= courseCount; i++) {
+      data["courses"].push({
+          department: data["department" + i],
+          number: data["courseNumber" + i],
+          name: data["courseName" + i],
+          reason: data["reasonForTaking" + i]
+      });
+      // remove individual course fields from data object
+      delete data["department" + i];
+      delete data["courseNumber" + i];
+      delete data["courseName" + i];
+      delete data["reasonForTaking" + i];
+  }
+  // Add image file
+  data["image"] = document.getElementById("image").files[0] || document.getElementById("loadImage").getElementsByTagName("img")[0].getAttribute("src");
+  return data;
+}
+
+// Function to load introduction content using form data
+function createIntroduction() {
+
+  // get introduction information from form data
+  const data = collectFormData();
+  if (!data) {
+    return; // Exit if form data is incomplete
+  }
+
+  // Build the content string with introduction details
+  let nameParts = [data.firstName];
+  if (data.middleInitial) {
+      nameParts.push(data.middleInitial);
+  }
+  if (data.preferredName) {
+      nameParts.push(`"${data.preferredName}"`);
+  }
+  nameParts.push(data.lastName);
+
+  let content = `
+<h2>${nameParts.join(' ')} ${data.divider} ${data.mascotAdjective} ${data.mascotAnimal}</h2>
+<figure>
+  <img src="${data.image instanceof File ? URL.createObjectURL(data.image) : data.image}" alt="Introduction Image"/>
+  <figcaption>${data.imageCaption}</figcaption>
+</figure>
+<ul>
+  <li><b>Personal Background:</b> ${data.personalBackground}</li>
+  <li><b>Professional Background:</b> ${data.professionalBackground}</li>
+  <li><b>Academic Background:</b> ${data.academicBackground}</li>
+  <li>
+    <b>Courses I'm Taking, & Why:</b>
+    <ol>
+`;
+  // Append courses
+  document.querySelectorAll("#coursesContainer fieldset").forEach((courseFieldset, index, courseFieldsets) => {
+      let id = courseFieldset.id.slice(-1);
+      const department = courseFieldset.querySelector("input[name='department" + id + "']").value;
+      const courseNumber = courseFieldset.querySelector("input[name='courseNumber" + id + "']").value;
+      const courseName = courseFieldset.querySelector("input[name='courseName" + id + "']").value;
+      const reasonForTaking = courseFieldset.querySelector("input[name='reasonForTaking" + id + "']").value;
+      content += `      <li><b>${department} ${courseNumber} - ${courseName}:</b> ${reasonForTaking}</li>`;
+      content += courseFieldsets.length - 1 === index ? "" : "\n";
+  });
+  content += `
+    </ol>
+  </li>
+  `;
+  // Only include the "funnyItem" if it is not empty
+  if (data.funnyItem !== undefined && data.funnyItem !== null && data.funnyItem !== "") {
+      content += `<li><b>Funny/Interesting Item to Remember Me by:</b> ${data.funnyItem}</li>`;
+  }
+  // Only include the "share" item if it is not empty
+  if (data.share !== undefined && data.share !== null && data.share !== "") {
+      content += `\n  <li><b>Something I would like to share:</b> ${data.share}</li>`;
+  }
+  // Close the unordered list and add the quote
+  content += `
+</ul>
+<blockquote>"${data.quote}"</blockquote>
+<cite>— ${data.quoteAuthor}</cite>
+`;
+
+  // Hide everything but the reset button and output container
+  toggleForm("hide");
+
+  // return content string to be used to load introduction or display HTML
+  return content;
+}
+
+// LOAD INTRODUCTION when 'Submit' button is clicked
+document.querySelector("button[type='submit']").addEventListener("click", () => {
+  let content = createIntroduction();
+  document.getElementById("outputContainer").innerHTML = content;
+});
