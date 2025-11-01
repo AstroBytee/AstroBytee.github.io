@@ -138,6 +138,12 @@ img {
     width: 430px;
 }
 
+.transparent-image {
+    box-shadow: none;
+    border-radius: 0;
+    width: 600px;
+}
+
 p {
     margin-bottom: 20px;
     line-height: 1.6;
